@@ -41,9 +41,12 @@ Page {
             }
             TextField {
                 id: firstValue
+
+                inputMethodHints: Qt.ImhFormattedNumbersOnly
                 placeholderText: qsTr("Enter value")
                 color: Theme.secondaryHighlightColor
                 font.pixelSize: Theme.fontSizeExtraLarge
+
 //                onEditingFinished: {
 
 //                }
@@ -59,12 +62,29 @@ Page {
             Label {
                 id: secondValue
                 x: Theme.horizontalPageMargin
-                text: firstValue.text * 75.1
+                text: try{
+                          Number(Number.fromLocaleString(Qt.locale(), firstValue.text) * 75.1).toLocaleCurrencyString(Qt.locale(), "USD")
+                      } catch(e){
+                          ""
+                      }
+
+                    //Number(firstValue.text * 75.1).toLocaleString()
                 color: Theme.secondaryHighlightColor
                 font.pixelSize: Theme.fontSizeExtraLarge
 
             }
-
+            function convert(){
+                firstName = "RUR"
+                secondName = "USD"
+                var req = new XMLHttpRequest()
+                req.open("GET", "https://www.cbr.ru/scripts/XML_daily.asp")
+                req.send()
+                console.log(req)
+            }
+            Button{
+                id: convertButton
+                onClicked: convert()
+            }
         }
     }
 }
