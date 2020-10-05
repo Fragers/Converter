@@ -15,27 +15,20 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Value in roubles</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Enter value</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Value in Dollars</source>
+        <source>Show Page 2</source>
         <translation type="unfinished"></translation>
     </message>
-</context>
-<context>
-    <name>SecondPage</name>
     <message>
-        <source>Nested Page</source>
-        <translation>Unterseite</translation>
+        <source>first charcode</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Item</source>
-        <translation>Element</translation>
+        <source>Second charcode charcode</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
